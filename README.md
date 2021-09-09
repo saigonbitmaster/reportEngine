@@ -31,6 +31,6 @@ yarn run server
 loopback/data/* //data files
 loopback/template/* //template files
 
-#try front end
+#try to generate report
 http://localhost:3000/
 select pdf/excel, type the number of report page wish to create, select option then submit
