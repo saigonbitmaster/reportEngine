@@ -1,0 +1,19 @@
+{
+  "name": "report-engine",
+  "scripts": {
+    "server": "cd loopback && node .",
+    "app": "cd app && yarn start",
+    "build": "cd app && yarn run build && cp -rf build/* ../loopback/client/"
+  },
+  "version": "1.0.0",
+  "repository": "https://github.com/saigonbitmaster/reportEngine",
+  "author": "saigonBitMaster <bitmaster.sg@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["loopback", "app"],
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0"
+  }
+}

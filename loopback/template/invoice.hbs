@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+  <!-- if change to page-break-after print will much slower -->
+<html>
+<head>
+  <style>
+    @page {
+      size: A5 landscape
+    }
+    @media screen, print {
+    
+      .pageBreak {
+        page-break-before: always;
+      }
+      .pageBreak:last-child {
+        page-break-before: avoid;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        text-align: left;
+        height: 8px;
+        line-height: auto;
+      }
+      .table1  * {
+        border: none;
+        border-collapse: collapse;
+        padding: 0px;
+        text-align: left;
+        height: 8px;
+        line-height: auto;
+       
+      }
+      .table1   {
+        border: none;
+        border-collapse: collapse;
+        padding: 0px;
+        text-align: left;
+        height: 8px;
+        line-height: auto;
+       
+      }
+      .center {
+        text-align: center;
+      }
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+      .x2 {
+        font-size: 9pt;
+      }
+      .x3 {
+        font-size: 10pt;
+      }
+      .x4 {
+        font-size: 12pt;
+      }
+      .x5 {
+        font-size: 20pt;
+      }
+      .b {
+        font-weight: bold;
+      }
+    .floatRight {
+      float: right;
+      margin-right: 10px;
+    }
+    .floatLeft {
+      float: left;
+      margin-left: 10px;
+    }
+    .block {
+      display: block;
+    }
+    .content {
+      background-color: white;
+      max-width: 100%;
+      text-align: left;
+      margin: 0px;
+      padding: 25px;
+    }
+    .upper {
+      text-transform:uppercase
+    }
+     .lower {
+      text-transform:lowercase
+    }
+    }
+  </style>
+</head>
+<body>
+    <div >
+    {{#each this}}
+ <div class="content">
+    <div class="left b upper  x5">INVOICE</div>
+      <br /> 
+      <div class="left x2">{{sellerInfo.name}}</div>
+      <div class="left x2"> {{sellerInfo.address}} </div>      
+      <div class="left x2">Tel: {{sellerInfo.phone}}</div>
+       <div class="left x2">Email: {{sellerInfo.email}}  </div>
+        <br /> 
+        <table style="width:100%" class="table1 x2">
+        <tr >
+           <th>BILL TO </th>
+          <th>SHIP TO</th>
+          <th>INVOICE# </th>
+            <th class="right">{{Plus @index}}</th>
+         
+        </tr>
+ <tr >
+           <td>{{client.name}} </td>
+           <td>{{client.name}} </td>
+          <td>INVOICE DATE </td>
+          <td class="right">{{formatDate signDate}} </td>
+          
+        </tr>
+      <tr >
+          <td>{{client.formattedAddress}} </td> 
+          <td> {{client.formattedAddress}}</td>
+          <td>B.O# </td>
+          <td class="right"> {{formatDate boDate}}</td>
+          
+          
+         
+        </tr>
+      </table>
+      
+      <br />
+            <table style="width:100%" class="x2">
+        <tr>
+          <th>QTY</th>
+          <th>DESCRIPTION</th>
+          <th>UNIT</th>
+          <th>AMOUNT</th>
+        
+        </tr>
+       
+        {{#each details}}
+        <tr>
+         
+          <td> {{formatNumber this.quantity}}</td>
+          <td>{{this.description}}</td>
+          <td> {{formatNumber this.price}}</td>
+          <td> {{formatNumber this.fee}}</td>
+        </tr>
+        {{/each}}
+        <tr>
+          <td colspan="3" class="right">SUB TOTAL</td>
+          <td> {{formatNumber fee}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="right">Tax {{taxPercent}}%</td>
+          <td> {{formatNumber taxFee}}</td>
+        </tr>
+       
+        <tr>
+          <td colspan="3" class="right">TOTAL</td>
+          <td>{{formatNumber totalFee}}</td>
+        </tr>
+        <tr>
+          <td colspan="4"> <b>Amount as words: {{toWordsUs totalFee}}</b></td>
+        </tr>
+      </table>
+     
+    
+      <div class="x3 block">
+        <br/>
+      
+        <span class="floatRight upper "> <b>Terms & conditions </b></span>
+        <br /> 
+        <span class="floatRight"> Payment is due within 15 days </span>
+        <br/>
+        <span class="floatRight"> Please make checks payable to: {{sellerInfo.name}} </span>
+      </div>
+    </div>
+      <div class="pageBreak"> </div>
+      {{/each}}
+    </div>
+</body>
+</html>
