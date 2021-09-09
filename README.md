@@ -7,7 +7,7 @@
 
 #clone and run code: 
 - git clone https://github.com/saigonbitmaster/reportEngine
-- yarn install 
+- yarn
 - yarn run server
 - http://localhost:3000/
 
