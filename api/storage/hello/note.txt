@@ -1,0 +1,3 @@
+yarn workspace app add react react-dom --dev
+yarn workspace app remove some-package
+npx babel-node  test1.js
