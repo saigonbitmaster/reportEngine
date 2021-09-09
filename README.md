@@ -34,3 +34,7 @@ loopback/template/* //template files
 #try to generate report
 http://localhost:3000/
 select pdf/excel, type the number of report page wish to create, select option then submit
+
+![frontEnd](https://user-images.githubusercontent.com/89018674/132648889-dcb8c279-7470-4aa3-b826-46d0eb8b52ec.jpg)
+![pdfScreenShot](https://user-images.githubusercontent.com/89018674/132648941-9313c3c9-ba85-476d-9502-8874a87948bf.jpg)
+![excelScreenShot](https://user-images.githubusercontent.com/89018674/132648967-05afaa9c-c162-4fb5-b474-65190c95ae25.jpg)
