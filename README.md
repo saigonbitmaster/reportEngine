@@ -5,19 +5,26 @@
 
 #dev and tested with nodejs v15.0.1
 
+#clone and run code: 
+- git clone https://github.com/saigonbitmaster/reportEngine
+- yarn install 
+- yarn run server
+- http://localhost:3000/
+
+
 #run separate client and server 
-yarn run server 
-yarn run app 
+- yarn run server 
+- yarn run app 
 
 #access frontend 
-http://localhost:3001/
+- http://localhost:3001/
 #access backend 
-http://localhost:3000/
+- http://localhost:3000/
 
 
 #build client and run server
-yarn run build
-yarn run server 
+- yarn run build
+- yarn run server 
 
 #access built frontend and backend 
 http://localhost:3000/
