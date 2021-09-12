@@ -18,7 +18,8 @@
 
 #access frontend 
 - http://localhost:3001/
-#access backend 
+- 
+#access api 
 - http://localhost:3000/
 
 
