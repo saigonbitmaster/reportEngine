@@ -44,5 +44,7 @@ http://localhost:3000/
 select pdf/excel, type the number of report page wish to create, select option then submit
 
 ![frontEnd](https://user-images.githubusercontent.com/89018674/132648889-dcb8c279-7470-4aa3-b826-46d0eb8b52ec.jpg)
-![pdfScreenShot](https://user-images.githubusercontent.com/89018674/132648941-9313c3c9-ba85-476d-9502-8874a87948bf.jpg)
+
+![Screen Shot 2021-09-13 at 12 12 55 PM](https://user-images.githubusercontent.com/89018674/133027595-f519fb8c-9f2e-40e3-a5bc-df4efa6e5618.jpg)
+
 ![excelScreenShot](https://user-images.githubusercontent.com/89018674/132648967-05afaa9c-c162-4fb5-b474-65190c95ae25.jpg)
