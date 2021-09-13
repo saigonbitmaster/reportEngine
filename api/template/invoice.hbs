@@ -133,18 +133,17 @@
       <br />
             <table style="width:100%" class="x2">
         <tr>
-          <th>QTY</th>
           <th>DESCRIPTION</th>
-          <th>UNIT</th>
+          <th>QTY</th>
+          <th>UNIT PRICE</th>
           <th>AMOUNT</th>
         
         </tr>
        
         {{#each details}}
         <tr>
-         
+         <td>{{this.description}}</td>
           <td> {{formatNumber this.quantity}}</td>
-          <td>{{this.description}}</td>
           <td> {{formatNumber this.price}}</td>
           <td> {{formatNumber this.fee}}</td>
         </tr>
